@@ -1,0 +1,66 @@
+:root
+{
+    --font-color: #dbdad5;
+    --border-radius: 10px
+}
+img
+{
+    max-width: 100%;
+    border-radius: var(--border-radius);
+}
+@font-face
+{
+    font-family: "main_font";
+    src: url(/fonts/notosans_variable.ttf);
+}
+@font-face
+{
+    font-family: "main_font";
+    font-style: italic;
+    src: url(/fonts/notosans_variable_italic.ttf);
+}
+#logo
+{
+    font-size: 40px;
+    font-weight: bolder;
+}
+*
+{
+    font-family: "main_font";
+}
+header, main, footer
+{
+    background-color: rgba(44, 42, 41, .6);
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    margin: 10px;
+    border-radius: var(--border-radius);
+}
+a:link
+{
+    color: var(--font-color)
+}
+a:visited
+{
+    color: color-mix(in srgb, var(--font-color) 80%, rgb(109, 96, 175) 40%);
+}
+a:hover
+{
+    color: color-mix(in srgb, var(--font-color) 80%, black 20%);
+}
+body
+{
+    max-width: 30em;
+
+    font-size: 20px;
+    height: 100%;
+    margin: 0 auto;
+    color: var(--font-color);
+
+    background: linear-gradient(to bottom, rgba(70, 68, 66, 0.6), rgba(0,3,3,0.6)), url("/pictures/computer_pixel_art.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    image-rendering: pixelated;
+}
