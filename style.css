@@ -1,7 +1,9 @@
 :root
 {
     --font-color: #dbdad5;
-    --border-radius: 10px
+    --border-radius: 10px;
+    --card-color: rgba(44, 42, 41, .6);
+    --card-color-opaque: rgb(44, 42, 41);
 }
 img
 {
@@ -28,13 +30,24 @@ img
 {
     font-family: "main_font";
 }
-header, main, footer
+.card
 {
-    background-color: rgba(44, 42, 41, .6);
+    background-color: var(--card-color);
     backdrop-filter: blur(15px);
     padding: 10px;
     margin: 10px;
     border-radius: var(--border-radius);
+        transition:
+        background-color 0.3s ease,
+        backdrop-filter 0.3s ease;
+}
+@media (max-width: 768px)
+{
+    .card
+    {
+        background-color: var(--card-color-opaque);
+        backdrop-filter: none;
+    }
 }
 a:link
 {
